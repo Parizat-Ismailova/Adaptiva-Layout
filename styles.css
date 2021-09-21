@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.section {
+    background-color: #f2395a;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    perspective: 1000px;
+}
+
+.heading {
+    margin-left: 40%;
+}
+
+.phone,
+.tablet,
+.desktop{
+    background-color: #fff;
+    box-shadow: 13px 13px 32px 0 rgba(242, 57, 90, .3);
+    position: absolute;
+    transition: 1s;
+    transform: translateY(100%);
+}
+
+.section:hover .phone,
+.section:hover .tablet,
+.section:hover .desktop {
+    transform: translateY(10px) rotateY(-15deg);
+}
+
+.phone {
+    width: 200px;
+    height: 280px;
+    left: 5%;
+    bottom: 0;
+    background: #fff url(html.png) center no-repeat;
+    z-index: 3;
+    transition-delay: 0.2s;
+}
+
+.tablet {
+    width: 360px;
+    height: 380px;
+    bottom: 0;
+    left: 10%;
+    background: #fff url(css.jpg) center no-repeat;
+    z-index: 1;
+    transition-delay: 0.4s;
+}
+
+.desktop {
+    width: 580px;
+    height: 480px;
+    background: #fff url(nodejs.png) center no-repeat;
+    bottom: 0;
+    left: 15%;
+    transition-delay: 0.6s;
+}
+
+.phone {
+    -webkit-transition: -webkit-transform .5s,
+                        background-color 1s ease-in .5s;
+    transition: transform .5s,
+                background-color 1s ease-in .5s;
+  }
+  .phone:hover,
+  .tablet:hover,
+  .desktop:hover {
+      background-color: red;
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: scale(1.5);
+    box-shadow: inset 7px 10px 12px #000;
+  }
+  @keyframes tablet {
+    from {
+      -webkit-transform: rotate(0) scale(.5);
+      left: 120%;
+    }
+    50% {
+      -webkit-transform: rotate(-720deg) scale(.5);
+      left: 0;
+    }
+  
+    to {
+      -webkit-transform: rotate(0) scale(1);
+    }
+  }
+  @keyframes desktop{
+    from {
+      transform: rotate(0) scale(.5);
+      left: 120%
+    }
+  
+    50% {
+      transform: rotate(-720deg) scale(.5);
+      left: 0;
+    }
+  
+    to {
+      transform: rotate(0) scale(1);
+    }
+  }
+
+  @keyframes backgroundGlow {
+      from {
+          background-color: yellow;
+      }
+      20%, 60% {
+          background-color: red;
+      }
+      to {
+          background-color: yellowgreen;
+      }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
